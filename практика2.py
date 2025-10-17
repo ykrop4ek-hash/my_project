@@ -15,27 +15,27 @@ def logger(func):
 
 
 @logger
-def add(a, b):
-    return a + b
+def add(x, y):
+    return x + y
 
 
 @logger
-def divide(a, b):
-    if b == 0:
+def divide(x, y):
+    if y == 0:
         raise ValueError("Деление на ноль невозможно")
-    return a / b
+    return x / y
 
 
 @logger
 def greet(name):
-    message = f"Привет, {name}!"
+    message = f"Hi, {name}!"
     print(message)
     return message
 
 add(54, 12)
 divide(21, 6)
 divide(36, 0)
-greet("Dazzle")
+greet("Peter")
 
 def require_role(allowed_roles):
     def decorator(func):
