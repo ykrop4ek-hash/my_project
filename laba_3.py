@@ -1,4 +1,5 @@
 from decimal import Decimal, getcontext
+from fractions import Fraction
 
 # Создание списка квадратов чисел от 1 до 10
 squares = [x**2 for x in range(1, 11)]
@@ -75,5 +76,24 @@ def deposit_calculator():
 
 
 # Запуск калькулятора
-if __name__ == "__main__":
-    deposit_calculator()
+# if __name__ == "__main__":
+#     deposit_calculator()
+
+
+# Создание дробей
+fraction1 = Fraction(3, 4)
+fraction2 = Fraction(5, 6)
+
+# Выполнение операций
+addition = fraction1 + fraction2
+subtraction = fraction1 - fraction2
+multiplication = fraction1 * fraction2
+division = fraction1 / fraction2
+
+# Вывод результатов
+print(f"Дробь 1: {fraction1}")
+print(f"Дробь 2: {fraction2}")
+print(f"Сложение: {fraction1} + {fraction2} = {addition}")
+print(f"Вычитание: {fraction1} - {fraction2} = {subtraction}")
+print(f"Умножение: {fraction1} * {fraction2} = {multiplication}")
+print(f"Деление: {fraction1} / {fraction2} = {division}")
