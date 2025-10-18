@@ -9,7 +9,8 @@ squares = [x**2 for x in range(1, 11)]
 #создание списка только четных чисел из диапазона от 1 до 20
 
 honest = [x for x in range(0,20,2)][1::]
-# print(honest)
+print(honest)
+print("hello,denis")
 
 words = ["python", "Java", "c++", "Rust", "go"]
 up_words = [w.upper() for w in words if len(w) > 3]
