@@ -1,5 +1,6 @@
 from decimal import Decimal, getcontext
 from fractions import Fraction
+from datetime import datetime
 
 # Создание списка квадратов чисел от 1 до 10
 squares = [x**2 for x in range(1, 11)]
@@ -91,9 +92,23 @@ multiplication = fraction1 * fraction2
 division = fraction1 / fraction2
 
 # Вывод результатов
-print(f"Дробь 1: {fraction1}")
-print(f"Дробь 2: {fraction2}")
-print(f"Сложение: {fraction1} + {fraction2} = {addition}")
-print(f"Вычитание: {fraction1} - {fraction2} = {subtraction}")
-print(f"Умножение: {fraction1} * {fraction2} = {multiplication}")
-print(f"Деление: {fraction1} / {fraction2} = {division}")
+# print(f"Дробь 1: {fraction1}")
+# print(f"Дробь 2: {fraction2}")
+# print(f"Сложение: {fraction1} + {fraction2} = {addition}")
+# print(f"Вычитание: {fraction1} - {fraction2} = {subtraction}")
+# print(f"Умножение: {fraction1} * {fraction2} = {multiplication}")
+# print(f"Деление: {fraction1} / {fraction2} = {division}")
+
+
+
+# Текущая дата и время
+current_datetime = datetime.now()
+
+# Текущая дата и время
+print(f"Текущая дата и время: {current_datetime.strftime('%d.%m.%Y %H:%M:%S')}")
+
+# Только текущая дата
+print(f"Только текущая дата: {current_datetime.strftime('%d.%m.%Y')}")
+
+# Только текущее время
+print(f"Только текущее время: {current_datetime.strftime('%H:%M:%S')}")
