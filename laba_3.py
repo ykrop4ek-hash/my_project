@@ -25,3 +25,15 @@ class Countdown:
 # Пример использования
 for x in Countdown(5):
     print(x)
+
+def fibonacci(n):
+    a, b = 0, 1
+    count = 0
+    while count < n:
+        yield a
+        a, b = b, a + b
+        count += 1
+
+# Пример использования
+for num in fibonacci(5):
+    print(num)
