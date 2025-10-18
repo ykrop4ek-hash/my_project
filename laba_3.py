@@ -1,6 +1,6 @@
 from decimal import Decimal, getcontext
 from fractions import Fraction
-from datetime import datetime
+from datetime import datetime, date
 
 # Создание списка квадратов чисел от 1 до 10
 squares = [x**2 for x in range(1, 11)]
@@ -105,10 +105,39 @@ division = fraction1 / fraction2
 current_datetime = datetime.now()
 
 # Текущая дата и время
-print(f"Текущая дата и время: {current_datetime.strftime('%d.%m.%Y %H:%M:%S')}")
+# print(f"Текущая дата и время: {current_datetime.strftime('%d.%m.%Y %H:%M:%S')}")
+#
+# # Только текущая дата
+# print(f"Только текущая дата: {current_datetime.strftime('%d.%m.%Y')}")
+#
+# # Только текущее время
+# print(f"Только текущее время: {current_datetime.strftime('%H:%M:%S')}")
 
-# Только текущая дата
-print(f"Только текущая дата: {current_datetime.strftime('%d.%m.%Y')}")
 
-# Только текущее время
-print(f"Только текущее время: {current_datetime.strftime('%H:%M:%S')}")
+
+
+
+# Дата рождения (замените на свою)
+birthday = date(2005, 2, 15)  # год, месяц, день
+
+# Сегодняшняя дата
+today = date.today()
+
+# Вычисляем, сколько дней прошло с момента рождения
+days_passed = (today - birthday).days
+
+# Вычисляем дату следующего дня рождения в этом году
+next_birthday = date(today.year, birthday.month, birthday.day)
+
+# Если день рождения в этом году уже прошел, берем следующий год
+if next_birthday < today:
+    next_birthday = date(today.year + 1, birthday.month, birthday.day)
+
+# Вычисляем, сколько дней осталось до следующего дня рождения
+days_to_next_birthday = (next_birthday - today).days
+
+# Вывод результатов
+print(f"Дата рождения: {birthday}")
+print(f"Сегодняшняя дата: {today}")
+print(f"Дней прошло с момента рождения: {days_passed} дней")
+print(f"Дней до следующего дня рождения: {days_to_next_birthday} дней")
