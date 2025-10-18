@@ -137,7 +137,27 @@ if next_birthday < today:
 days_to_next_birthday = (next_birthday - today).days
 
 # Вывод результатов
-print(f"Дата рождения: {birthday}")
-print(f"Сегодняшняя дата: {today}")
-print(f"Дней прошло с момента рождения: {days_passed} дней")
-print(f"Дней до следующего дня рождения: {days_to_next_birthday} дней")
+# print(f"Дата рождения: {birthday}")
+# print(f"Сегодняшняя дата: {today}")
+# print(f"Дней прошло с момента рождения: {days_passed} дней")
+# print(f"Дней до следующего дня рождения: {days_to_next_birthday} дней")
+
+
+def format_datetime(dt):
+    # Словари для русских названий месяцев и дней недели
+    months = {
+        1: 'января', 2: 'февраля', 3: 'марта', 4: 'апреля',
+        5: 'мая', 6: 'июня', 7: 'июля', 8: 'августа',
+        9: 'сентября', 10: 'октября', 11: 'ноября', 12: 'декабря'
+    }
+
+    # Форматируем строку
+    formatted = f"Сегодня {dt.day} {months[dt.month]} {dt.year} года, время: {dt.strftime('%H:%M')}"
+
+    return formatted
+
+
+# Пример использования
+current_datetime = datetime.now()
+formatted_string = format_datetime(current_datetime)
+# print(formatted_string)
